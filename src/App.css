@@ -1,5 +1,15 @@
+html{
+  scroll-snap-type: y mandatory;
+}
 .App {
   text-align: center;
+
 }
+body{
+  background-color: var(--dark);
+  
+  
+}
+
 
 

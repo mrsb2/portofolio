@@ -1,12 +1,28 @@
 import './App.css';
 import {About, Home, Show} from './pages';
+import {Navbar,Footer} from './components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <a href='https://colorhunt.co/palette/282f44e6af2ef5d061ececec'><h1>COLOR</h1></a>
-    </div>
+
+    <>
+    <BrowserRouter>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/show" element={<Show />} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+    
+    </>
+
   );
 }
 
 export default App;
+
+
+
